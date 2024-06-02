@@ -1,1 +1,179 @@
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Ubuntu", sans-serif;
+    }
+    :root{
+      --textcolor : #fff;
+      --bodycolor : #000;
+      --sectioncolor : #252525;
+      --btncolor : #fff;
+      --sectionborder : #fff;
+    }
+    .darkmode{
+      --textcolor : #000;
+      --bodycolor : #dcdcdc;
+      --sectioncolor : #f0f8ff;
+      --btncolor : #dcdcdc;
+      --sectionborder : #000;
+    }
+    body{
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: var(--bodycolor);
+      transition: 0.3s ease;
+    }
+    section{
+      height:550px;
+      width: 350px;
+      border-radius:15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction:column;
+     background-color:var(--sectioncolor);
+     
+      position: relative;
+      transition: 0.3s ease;
+      backdrop-filter: blur(2px);
+    }
+    
+    #mode{
+      position: absolute;
+      height:25px;
+      width:25px;
+      background-color:;
+      border-radius:50%;
+      top:10px;
+      right:15px;
+      transition: 0.3s ease;
+      
+    }
+    #mode{
+      filter: invert(86%) sepia(33%) saturate(3540%) hue-rotate(352deg) brightness(106%) contrast(108%);
+    }
+    #title{
+      text-transform: uppercase;
+      transition: 0.8s linear;
+      animation: text 4s infinite alternate;
+      text-align:center;
+      letter-spacing: 4px;
+    }
+    
+
+    #color{
+      height:40%;
+      width: 80%;
+      border: 3px solid var(--sectionborder);
+      border-radius: 15px;
+      background-color: white;
+      transition:0.1s linear ;
+      z-index: 99;
+    }
+    #text{
+      height: 10%;
+      width:40%;
+      border-radius: 12px;
+      color:var(--textcolor);
+      background-color: var(--btncolor);
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      font-size: 25px;
+      background: linear-gradient(145deg, #3b3b3b, #474747);
+      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.6);
+      transition: 0.3s ease;
+    }
+    #text.darkmode{
+      background: linear-gradient(0deg, #f0f8ff, #f0f8ff);
+      box-shadow:  10px -20px 30px #c9c9c9
+            -10px 20px 30px #c9c9c9;
+      transition: 0.3s ease;     
+    }
+    #button{
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width:80%;
+    }
+    #generate{
+      border: none;
+      padding: 15px 10px;
+      font-size: 16px;
+      color:var(--textcolor);
+      background-color: var(--btncolor);
+      transition: 0.3s ease;
+      border-radius: 8px;
+      font-weight: 600;
+      background: linear-gradient(145deg, #3b3b3b, #474747);
+      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.6);
+      transition: 0.3s ease;
+    }
+    #generate.darkmode{
+      background: linear-gradient(0deg, #f0f8ff, #f0f8ff);
+      box-shadow:  10px -20px 30px #c9c9c9
+            -10px 20px 30px #c9c9c9;
+      transition: 0.3s ease;     
+    }
+    #copy{
+      border: none;
+      font-size: 16px;
+      padding: 15px 10px;
+      border-radius:8px;
+      color:var(--textcolor);
+      font-weight: 600;
+      background-color: var(--btncolor);
+      transition: 0.3s ease;
+      background: linear-gradient(145deg, #3b3b3b, #474747);
+      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.6);
+    }
+    #copy.darkmode{
+      background: linear-gradient(0deg, #f0f8ff, #f0f8ff);
+      box-shadow:  10px -20px 30px #c9c9c9
+            -10px 20px 30px #c9c9c9;
+      transition: 0.3s ease;     
+    }
+    p{
+      color: var(--textcolor);
+      margin-top: 20px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content:center;
+    }
+    p span{
+      font-size: 23px;
+      margin-left: 5px;
+      animation: text 5s infinite alternate;
+    }
+    
+        @keyframes text{
+      0%{
+        color:violet;
+      }
+      15%{
+        color: indigo;
+      }
+      30%{
+        color:blue;
+      }
+      50%{
+        color:green;
+      }
+      65%{
+        color:yellow;
+      }
+      80%{
+        color:orange;
+      }
+      100%{
+        color:red;
+      }
+    }
